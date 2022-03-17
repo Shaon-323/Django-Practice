@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+       <h1>Welcome to the website</h1>
+       <form method="POST" action="/result page/">
+           {%csrf_token %}
+           <input type="number" name="Number 1">
+           <input type="number" name="Number 2">
+           <button type="submit">Submit</button>
+       </form>
+       <h2>Number 1: {{result.num1}}</h2>
+       <h2>Number 2: {{result.num2}}</h2>
+       <div>
+           {% for t in data %}
+                <h2>{{t.todo}}</h2>
+           {% endfor %}
+       </div>
+    </body>
+</html>
